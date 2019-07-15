@@ -1,0 +1,36 @@
+新建student表：
+ create table student(
+	id smallint unsigned auto_increment primary key,
+    name varchar(20) not null,
+	age  tinyint unsigned not null,
+	sex char(4) not null
+    );
+插入值：
+	insert into student values (001, '张三', 18, '男'),
+	(002, '李四', 20, '女')
+	
+新建subject表：
+ create table subject(
+	id smallint unsigned auto_increment primary key,
+	subject varchar(20) not null,
+	teacher  varchar(20) not null,
+	description varchar(50) not null
+    );
+插入值：
+	insert into subject values (1001, '语文', '王老师', '本次考试比较简单'),
+	(1002, '数学', '刘老师', '本次考试比较难')	
+	
+新建score表：
+ create table score(
+	id smallint unsigned auto_increment primary key,
+	student_id varchar(20) not null,
+	subject_id  varchar(20) not null,
+	score double not null
+    );
+插入值：
+	insert into score values (1, '001', '1001', '80'),
+	(2, '002', '1002', '60'),
+	(3, '001', '1001', '70'),
+	(4, '002', '1002', '60.5')
+	
+	
